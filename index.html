@@ -778,48 +778,37 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
         </div>
       </div>
     </div>
-    <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-2col">
-        <div class="field-group">
-          <label class="field-label">Full Name *</label>
-          <input type="text" placeholder="Your name" required="">
-        </div>
-        <div class="field-group">
-          <label class="field-label">Phone Number *</label>
-          <input type="tel" placeholder="+64 or +86">
-        </div>
-      </div>
-      <div class="field-group">
-        <label class="field-label">Email Address *</label>
-        <input type="email" placeholder="your@email.com" required="">
-      </div>
-      <div class="field-group">
-        <label class="field-label">Programme of Interest *</label>
-        <select required="">
-          <option value="" disabled="" selected="">Select a programme</option>
-          <option>International Student Exchange (1 term – 1 year)</option>
-          <option>Short-Term Study Tour (2 weeks)</option>
-          <option>Long-Term Study Pathway (1+ year)</option>
-          <option>Not sure yet — I'd like some advice</option>
-        </select>
-      </div>
-      <div class="field-group">
-        <label class="field-label">Student's Current Year Level</label>
-        <select>
-          <option value="" disabled="" selected="">Select year level</option>
-          <option>Primary School</option>
-          <option>Intermediate / Year 7–8</option>
-          <option>High School Year 9–10</option>
-          <option>High School Year 11–13</option>
-          <option>University or above</option>
-        </select>
-      </div>
-      <div class="field-group">
-        <label class="field-label">Anything else you'd like us to know?</label>
-        <textarea placeholder="Tell us about your goals, preferred timing, or any questions you have..."></textarea>
-      </div>
-      <button type="submit" class="submit-btn" id="submitBtn">Send Enquiry →</button>
-    </form>
+   <form action="https://formspree.io/f/mlgokwkv" method="POST" class="contact-form">
+
+  <div class="form-2col">
+    <div class="field-group">
+      <label class="field-label">Full Name</label>
+      <input type="text" name="name" placeholder="Your name" required>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">Phone Number</label>
+      <input type="tel" name="phone" placeholder="+64 or +86">
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">Email Address</label>
+    <input type="email" name="email" placeholder="your@email.com" required>
+  </div>
+
+  <div class="field-group">
+    <label class="field-label">Message</label>
+    <textarea name="message" placeholder="Your enquiry..." required></textarea>
+  </div>
+
+  <!-- Hidden settings -->
+  <input type="hidden" name="_subject" value="New WE Education Enquiry">
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit" class="submit-btn">Send Enquiry</button>
+
+</form>
   </div>
 </section>
 
