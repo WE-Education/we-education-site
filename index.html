@@ -146,21 +146,16 @@ nav{
   grid-template-rows: 1fr 1fr;
   gap: 16px;
 
-  max-width: 380px; /* 👈 controls overall size */
+.hero-visual {
+  max-width: 460px;   /* 👈 bigger overall */
 }
 
-/* BIG IMAGE */
 .photo-cell.tall {
-  grid-row: 1 / span 2;
-  height: 360px;
+  height: 420px;   /* was 360 */
 }
 
-/* SMALL IMAGES */
 .photo-cell {
-  height: 170px;
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
+  height: 200px;   /* was 170 */
 }
 
 /* IMAGE FIT */
@@ -171,17 +166,9 @@ nav{
   display: block;
 }
 
-/* LABEL BADGE */
 .photo-badge {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background: #f5a623;
-  color: black;
-  font-size: 12px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-weight: 500;
+  font-size: 14px;   /* was 12 */
+  padding: 8px 14px; /* slightly bigger */
 }
 /* ── VIDEO SECTION ── */
 .video-sec{
