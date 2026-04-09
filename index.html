@@ -440,10 +440,16 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
 .hero-visual{animation:fadeUp .8s .35s cubic-bezier(.2,.8,.2,1) both}
 </style>
 .logo-img {
-  height: 42px;
-  width: auto;
-  max-width: 120px;   /* prevents it from getting too wide */
+  height: 42px !important;
+  width: auto !important;
+  max-width: 120px !important;
   object-fit: contain;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 </style>
 </head>
@@ -451,10 +457,10 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
 
 <!-- ── NAV ── -->
 <nav>
-<a href="#" class="logo-wrap">
-  <img src="images/logo.png" alt="WE Education Logo" class="logo-img">
-  <div class="logo-name">WE Education<span class="logo-dot">.</span></div>
-</a>
+  <a href="#" class="logo-wrap">
+    <img src="images/logo.png" class="logo-img">
+  </a>
+</nav>
   <ul class="nav-links">
     <li><a href="#programs">Programs</a></li>
     <li><a href="#video">Our Story</a></li>
