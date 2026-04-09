@@ -135,9 +135,9 @@ nav{
 /* HERO RIGHT — photo mosaic */
 .hero-visual {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr; /* 👈 make left bigger */
   grid-template-rows: auto auto;
-  gap: 12px;
+  gap: 16px; /* slightly more breathing space */
 }
 .photo-cell{
   border-radius:14px;overflow:hidden;
@@ -147,11 +147,11 @@ nav{
 }
 .photo-cell.tall {
   grid-row: span 2;
-  height: 420px;
+  height: 520px; /* 👈 bigger */
 }
+
 .photo-cell {
-  height: 200px;
-  overflow: hidden;
+  height: 240px; /* 👈 bigger */
 }
 
 .photo-cell img {
