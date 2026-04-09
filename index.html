@@ -138,19 +138,20 @@ nav{
   grid-template-columns: 1.1fr 1fr; /* tighten layout */
   gap: 40px;
 }
-.photo-cell{
-  border-radius:14px;overflow:hidden;
-  background:rgba(255,255,255,0.07);
-  border:1px solid rgba(255,255,255,0.08);
-  position:relative;
-}
 .photo-cell.tall {
   grid-row: span 2;
   height: 520px; /* 👈 bigger */
 }
 
 .photo-cell {
-  height: 240px; /* 👈 bigger */
+  border-radius:14px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.08);
+  position:relative;
+
+  height:240px;      /* 👈 keep this here */
+  padding:0;         /* 👈 ADD THIS (important fix) */
 }
 
 .photo-cell img {
