@@ -780,13 +780,47 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
           </div>
         </div>
       </div>
-      <div class="wechat-strip">
-        <div class="wc-icon">💬</div>
-        <div>
-          <h5>WeChat / 微信</h5>
-          <p>Prefer to chat in Mandarin? Scan our QR code or message us on WeChat — we're happy to help in Chinese.</p>
-        </div>
-      </div>
+   .qr-container{
+  display:flex;
+  gap:1.25rem;
+  margin-top:2rem;
+}
+
+.qr-box{
+  flex:1;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:14px;
+  padding:1.25rem;
+  text-align:center;
+}
+
+.qr-box h5{
+  font-size:14px;
+  color:var(--orange);
+  margin-bottom:10px;
+}
+
+.qr-box img{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  margin-bottom:10px;
+}
+
+.qr-box p{
+  font-size:12px;
+  color:rgba(255,255,255,0.5);
+}
+
+  <!-- WhatsApp -->
+  <div class="qr-box">
+    <h5>WhatsApp</h5>
+    <img src="./images/whatsapp-qr.png" alt="WhatsApp QR">
+    <p>Scan to chat with us on WhatsApp</p>
+  </div>
+
+</div>
     </div>
    <form action="https://formspree.io/f/mlgokwkv" method="POST" class="contact-form">
 
