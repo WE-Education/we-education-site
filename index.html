@@ -43,28 +43,11 @@ nav{
   text-decoration: none;
 }
 
-/* 🔥 KEY FIX (this controls visual size) */
-.logo-mark{
-  width:28px;
-  height:28px;
-  border-radius:8px;
-  background:var(--purple);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'Fraunces',serif;
-  font-size:14px;
-  font-weight:700;
-  color:#fff;
-  letter-spacing:-0.5px;
-  flex-shrink:0;
-}
-
 /* 🔥 THIS controls your actual logo image */
 .logo-img{
-  height:20px;
-  width:auto;
-  display:block;
+  height: 28px;
+  width: auto;
+  display: block;
 }
 
 .logo-name{
@@ -455,31 +438,16 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
 .hero-stats{animation-delay:.56s}
 .hero-visual{animation:fadeUp .8s .35s cubic-bezier(.2,.8,.2,1) both}
 </style>
-nav .logo-wrap .logo-img {
-  height: 18px !important;
-  width: auto !important;
-}
-
-nav .logo-wrap .logo-mark {
-  width: 24px !important;
-  height: 24px !important;
-  font-size: 12px !important;
-}
-
-nav {
-  height: 52px !important;
-}
 </style>
 </head>
 <body>
 
 <!-- ── NAV ── -->
 <nav>
-  <a href="#" class="logo-wrap">
-    <div class="logo-mark">WE</div>
-    <img src="./images/logo.png" class="logo-img" alt="WE Education logo">
-    <div class="logo-name">WE Education<span class="logo-dot">.</span></div>
-  </a>
+<a href="#" class="logo-wrap">
+  <img src="./images/logo.png" class="logo-img" alt="WE Education logo">
+  <div class="logo-name">WE Education<span class="logo-dot">.</span></div>
+</a>
 
   <ul class="nav-links">
     ...
