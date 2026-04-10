@@ -443,15 +443,16 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
 /* all your existing CSS */
 
 /* ADD THIS AT THE VERY BOTTOM INSIDE */
+/* ── FIX LOGO SIZE ── */
 .logo-img {
-  height: 42px !important;
+  height: 28px !important;
   width: auto !important;
-  max-width: 120px !important;
+  max-height: 28px !important;
+  object-fit: contain;
 }
 
 .logo-wrap img {
-  width: auto !important;
-  height: 42px !important;
+  height: 28px !important;
 }
 
 </style>
@@ -459,11 +460,11 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
 <body>
 
 <!-- ── NAV ── -->
-<nav>
-  <a href="#" class="logo-wrap">
-    <img src="images/logo.png" class="logo-img">
-    <div class="logo-name">WE Education<span class="logo-dot">.</span></div>
-  </a>
+nav .logo-wrap img {
+  height: 28px !important;
+  max-height: 28px !important;
+  width: auto !important;
+}
 
   <ul class="nav-links">
     <li><a href="#programs">Programs</a></li>
