@@ -20,7 +20,10 @@
   --muted:#6e6570;
   --border:#e8e2ec;
 }
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:80px;
+}
 
 /* 🔥 FIX SCROLL OFFSET (ADD THIS) */
 section{
@@ -28,9 +31,6 @@ section{
 }
 
 /* 🔥 FIX NAV OVERLAP (ADD THIS) */
-body{
-  padding-top:56px;
-}
 body{
   font-family:'DM Sans',sans-serif;
   background:var(--off-white);
@@ -75,16 +75,16 @@ nav{
 
 /* ── HERO ── */
 .hero{
-  min-height:100vh;
+  min-height:auto;   /* 🔥 FIX */
   background:var(--purple-deeper);
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:9rem 3rem 5rem;
-  position:relative;
 
-  overflow:hidden;   /* ✅ CRITICAL FIX */
-  z-index:0;         /* ✅ LOWER IT */
+  padding:120px 3rem 80px;  /* 🔥 controlled spacing */
+
+  position:relative;
+  overflow:hidden;
 }
 
 /* Geometric background shapes */
