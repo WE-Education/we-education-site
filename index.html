@@ -405,15 +405,7 @@ nav{
   height:200px;
   background:var(--purple-deeper);
   z-index:-1;
-}
-.contact-inner{
-  max-width:1160px;
-  margin:0 auto;
-  display:flex;              /* 🔥 CHANGE THIS */
-  flex-direction:column;     /* 🔥 STACK EVERYTHING */
-  align-items:center;        /* 🔥 CENTER */
-  gap:2rem;
-}
+
   .contact-left{
   display:flex;
   flex-direction:column;
@@ -443,9 +435,12 @@ nav{
 /* QR SIDE BY SIDE */
 .qr-container{
   display:flex;
+  flex-direction:row;     /* 🔥 FORCE SIDE BY SIDE */
   justify-content:center;
   align-items:center;
   gap:3rem;
+  margin:2rem auto;
+  width:100%;
 }
 
 /* CONTACT DETAILS CENTER */
@@ -464,9 +459,6 @@ nav{
   justify-content:center;
 }
 /* optional fine-tune */
-.contact-middle{
-  transform: translateY(-40px);
-}
 .contact-lbl{
   font-size:10.5px;
   letter-spacing:2px;
@@ -1094,7 +1086,29 @@ body{
   </div>
 
 </section>
-       <div class="contact-inner">
+    <div class="contact-inner">
+
+  <div class="contact-left">
+    <div class="overline">Contact</div>
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you.</p>
+  </div>
+
+  <div class="qr-container">
+    <div class="qr-box">
+      <h4>WeChat</h4>
+      <img src="./images/wechat.png">
+      <p>Scan to chat with us</p>
+    </div>
+
+    <div class="qr-box">
+      <h4>WhatsApp</h4>
+      <img src="./images/whatsapp.png">
+      <p>Scan to chat with us</p>
+    </div>
+  </div>
+
+</div>
 
   <!-- CONTACT DETAILS -->
   <div class="contact-details">
