@@ -75,13 +75,13 @@ nav{
 
 /* ── HERO ── */
 .hero{
-  min-height:auto;   /* 🔥 FIX */
   background:var(--purple-deeper);
   display:flex;
-  flex-direction:column;
-  justify-content:center;
+  align-items:center;
 
-  padding:120px 3rem 80px;  /* 🔥 controlled spacing */
+  min-height:calc(100vh - 56px);  /* 🔥 MOST IMPORTANT FIX */
+
+  padding:60px 3rem 60px;
 
   position:relative;
   overflow:hidden;
@@ -391,7 +391,6 @@ nav{
   background:var(--purple-deeper);
   padding:6rem 3rem 8rem;
   position: relative;
-  z-index: 5;   /* 🔥 increase this */
 }
 .contact-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
 .contact-left .overline{color:var(--orange);opacity:.85}
@@ -442,7 +441,6 @@ nav{
 .wechat-strip h5{font-size:14px;font-weight:500;color:var(--orange);margin-bottom:4px}
 .wechat-strip p{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6}
 
-/* FORM */
 /* FORM */
 .contact-form{
   display:flex;
