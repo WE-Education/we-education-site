@@ -431,29 +431,38 @@ nav{
   display:flex;align-items:center;justify-content:center;font-size:1rem;
 }
   /* 🔥 NEW CENTER BLOCK */
-.contact-middle{
-  max-width:1160px;
-  margin:2.5rem auto 0;
+.contact-inner{
   display:flex;
+  flex-direction:column;
+  align-items:center;
   justify-content:center;
+  gap:2.5rem;
   text-align:center;
 }
 
+/* QR SIDE BY SIDE */
+.qr-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:3rem;
+}
+
+/* CONTACT DETAILS CENTER */
 .contact-details{
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:1.5rem;
-  margin-top:2rem;
-  text-align:center;
 }
 
+/* EACH ROW PERFECT ALIGN */
 .contact-row{
   display:flex;
+  align-items:center;
   gap:1rem;
-  justify-content:center;  /* 🔥 ADD */
+  justify-content:center;
 }
-
 /* optional fine-tune */
 .contact-middle{
   transform: translateY(-40px);
@@ -1099,29 +1108,57 @@ body{
   </div>
 
 </section>
-        <div class="contact-row">
-          <div class="contact-ico">🌐</div>
-          <div>
-            <div class="contact-lbl">Website</div>
-            <div class="contact-val">www.weeducation.co.nz</div>
-          </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-ico">📧</div>
-          <div>
-            <div class="contact-lbl">Email</div>
-            <div class="contact-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="472821212e24220730222223322426332e282969242869293d">office@weeducation.co.nz</a></div>
-          </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-ico">📍</div>
-          <div>
-            <div class="contact-lbl">Location</div>
-            <div class="contact-val">Auckland, New Zealand</div>
-          </div>
-        </div>
+       <div class="contact-inner">
+
+  <!-- TITLE -->
+  <div class="contact-left">
+    <h2>Contact Us!</h2>
+  </div>
+
+  <!-- QR CODES -->
+  <div class="qr-container">
+    <div class="qr-box">
+      <h4>WeChat</h4>
+      <img src="your-wechat.png">
+    </div>
+
+    <div class="qr-box">
+      <h4>WhatsApp</h4>
+      <img src="your-whatsapp.png">
+      <p>Scan to chat with us</p>
+    </div>
+  </div>
+
+  <!-- CONTACT DETAILS -->
+  <div class="contact-details">
+    
+    <div class="contact-row">
+      <div class="contact-ico">🌐</div>
+      <div>
+        <div class="contact-lbl">Website</div>
+        <div class="contact-val">www.weeducation.co.nz</div>
       </div>
     </div>
+
+    <div class="contact-row">
+      <div class="contact-ico">📧</div>
+      <div>
+        <div class="contact-lbl">Email</div>
+        <div class="contact-val">office@weeducation.co.nz</div>
+      </div>
+    </div>
+
+    <div class="contact-row">
+      <div class="contact-ico">📍</div>
+      <div>
+        <div class="contact-lbl">Location</div>
+        <div class="contact-val">Auckland, New Zealand</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
   <form id="enquiry" action="https://formspree.io/f/mlgokwkv" method="POST" class="contact-form">
   <div class="form-2col">
     <div class="field-group">
