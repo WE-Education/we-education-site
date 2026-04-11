@@ -619,7 +619,7 @@ body{
   /* ── MOBILE RESPONSIVE ── */
 @media (max-width: 768px) {
 
-  /* 🔥 HARD FIX FOR RIGHT SPACE */
+  /* 🔥 STOP RIGHT OVERFLOW */
   html, body {
     width: 100%;
     overflow-x: hidden;
@@ -644,14 +644,23 @@ body{
     gap: 2rem;
     text-align: center;
     justify-items: center;
-    width: 100%;
-    max-width: 100%;
   }
 
   .hero-left {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  /* ✅ FIX TEXT CUTTING */
+  .hero h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .hero-lead {
+    font-size: 0.95rem;
   }
 
   .hero-actions {
@@ -669,13 +678,19 @@ body{
     margin: 0 auto;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
+  /* ✅ FIX IMAGE STRETCH (ALL IMAGES) */
+  .photo-cell img,
+  .gallery-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-
-  .hero-lead {
-    font-size: 0.95rem;
-  }
+  .photo-cell img,
+.gallery-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
   /* VIDEO */
   .video-sec {
@@ -687,8 +702,21 @@ body{
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+  }
+
+  /* ✅ FIX VIDEO CROPPING */
+  .video-wrap {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-wrap video {
     width: 100%;
-    max-width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
   }
 
   /* PROGRAMS */
@@ -707,10 +735,14 @@ body{
     padding-right: 1.2rem !important;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
+.gallery-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gallery-cell {
+  aspect-ratio: 1 / 1;   /* 🔥 PERFECT SQUARE */
+}
 
   /* PHILOSOPHY */
   .phil-sec {
@@ -761,15 +793,6 @@ body{
     text-align: center;
   }
 
-  .contact-left {
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-details {
-    align-items: center;
-  }
-
   .contact-row {
     justify-content: center;
   }
@@ -780,15 +803,11 @@ body{
     gap: 1.5rem;
   }
 
-  .qr-box {
-    max-width: 160px;
-  }
-
   .qr-box img {
     width: 120px;
   }
 
-  /* GENERAL CONTAINER FIX */
+  /* GENERAL */
   .programs-inner,
   .gallery-inner,
   .phil-inner,
