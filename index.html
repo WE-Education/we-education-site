@@ -65,7 +65,7 @@ nav{
 
 /* ── HERO ── */
 .hero{
-  min-height:calc(100vh - 56px);  /* ✅ FIX */
+  min-height:100vh;
   background:var(--purple-deeper);
   display:flex;
   flex-direction:column;
@@ -73,8 +73,8 @@ nav{
   padding:9rem 3rem 5rem;
   position:relative;
 
-  overflow:visible;
-  z-index:1;
+  overflow:hidden;   /* ✅ CRITICAL FIX */
+  z-index:0;         /* ✅ LOWER IT */
 }
 
 /* Geometric background shapes */
@@ -90,7 +90,7 @@ nav{
   border:100px solid rgba(245,166,35,0.07);
 
   pointer-events:none;
-  z-index: 0;   /* 🔥 IMPORTANT */
+  z-index:-1;   /* ✅ PUSH BACK */
 }
 
 .hero::after{
@@ -104,7 +104,7 @@ nav{
   border:60px solid rgba(123,45,139,0.3);
 
   pointer-events:none;
-  z-index: 0;   /* 🔥 IMPORTANT */
+  z-index:-1;   /* ✅ PUSH BACK */
 }
 .hero-inner{
   max-width:1160px;margin:0 auto;width:100%;
