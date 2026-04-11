@@ -390,19 +390,6 @@ nav{
   font-size:12px;
   color:#666;
 }
-  <div class="qr-container">
-  <div class="qr-box">
-    <img src="images/wechat-qr.png">
-  </div>
-
-  <!-- WhatsApp -->
-  <div class="qr-box">
-    <h5>WhatsApp</h5>
-    <img src="./images/whatsapp-qr.png" alt="WhatsApp QR">
-    <p>Scan to chat with us on WhatsApp</p>
-  </div>
-
-</div>
 .wc-icon{font-size:2.5rem;flex-shrink:0}
 .wechat-strip h5{font-size:14px;font-weight:500;color:var(--orange);margin-bottom:4px}
 .wechat-strip p{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6}
@@ -496,6 +483,84 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
 .qr-box p{
   font-size:12px;
   color:#666;
+}
+</style>
+  /* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr; /* stack */
+    gap: 2rem;
+  }
+
+  .hero-visual {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .video-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .prog-grid {
+    grid-template-columns: 1fr; /* 3 → 1 column */
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .phil-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pillars-row {
+    grid-template-columns: 1fr;
+  }
+
+  .serve-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .form-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .qr-container {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-lead {
+    font-size: 0.95rem;
+  }
 }
 </style>
 </head>
@@ -810,28 +875,26 @@ footer{background:#1a0d1f;padding:3.5rem 3rem 2rem}
 </section>
 
 <!-- ── CONTACT ── -->
-<section class="contact-sec" id="contact">
-  <div class="contact-inner">
-    <div class="contact-left">
-      <div class="overline">Get in Touch</div>
-      <h2>Start Your<br>International Journey</h2>
-      <p>Fill in the form and one of our bilingual advisors will be in touch within one business day with a free, personalised education consultation.</p>
-      <div class="contact-details">
-        <div class="qr-container">
+<section class="contact-sec">
 
-  <div class="qr-box">
-    <h5>WeChat / 微信</h5>
-    <img src="images/wechat-qr.png" alt="WeChat QR">
-    <p>Scan to connect with us on WeChat</p>
+  <!-- your other contact content -->
+
+  <div class="qr-container">
+
+    <div class="qr-box">
+      <h5>WeChat</h5>
+      <img src="images/wechat-qr.png">
+    </div>
+
+    <div class="qr-box">
+      <h5>WhatsApp</h5>
+      <img src="./images/whatsapp-qr.png" alt="WhatsApp QR">
+      <p>Scan to chat with us on WhatsApp</p>
+    </div>
+
   </div>
 
-  <div class="qr-box">
-    <h5>WhatsApp</h5>
-    <img src="images/whatsapp-qr.png" alt="WhatsApp QR">
-    <p>Scan to chat with us on WhatsApp</p>
-  </div>
-
-</div>
+</section>
         <div class="contact-row">
           <div class="contact-ico">🌐</div>
           <div>
