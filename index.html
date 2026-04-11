@@ -21,8 +21,13 @@
   --border:#e8e2ec;
 }
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--off-white);color:var(--ink);line-height:1.6}
-
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--off-white);
+  color:var(--ink);
+  line-height:1.6;
+  padding-top: 56px;   /* ✅ ADD THIS LINE */
+}
 /* ── NAV ── */
 /* ── NAV ── */
 nav{
@@ -354,7 +359,10 @@ nav{
 .author-prog{font-size:11.5px;color:var(--muted);margin-top:2px}
 
 /* ── CONTACT ── */
-.contact-sec{background:var(--purple-deeper);padding:6rem 3rem}
+.contact-sec{
+  background:var(--purple-deeper);
+  padding:6rem 3rem 8rem;
+}
 .contact-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
 .contact-left .overline{color:var(--orange);opacity:.85}
 .contact-left h2{font-family:'Fraunces',serif;font-size:clamp(2rem,3vw,2.75rem);font-weight:700;color:#fff;letter-spacing:-0.5px;line-height:1.15;margin-bottom:.875rem}
