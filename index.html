@@ -443,7 +443,8 @@ nav{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:1.2rem;
+  gap:1.5rem;
+  margin-top:2rem;
   text-align:center;
 }
 
@@ -471,10 +472,11 @@ nav{
 
 .qr-container{
   display:flex;
+  justify-content:center;
+  align-items:center;   /* ✅ FIX */
   gap:3rem;
   margin:2rem auto;
-  justify-content:center;
-  align-items:center;   /* ✅ CENTER PERFECTLY */
+  width:100%;
 }
 
 .qr-box{
@@ -697,10 +699,6 @@ body{
   text-align:center;
 }
 
-.contact-details{
-  align-items:center;
-}
-
 .contact-row{
   justify-content:center;
 }
@@ -724,6 +722,11 @@ body{
   border-radius:14px;
   padding:1.5rem;
   text-align:center;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
 .contact-details{
@@ -737,8 +740,9 @@ body{
 .contact-row{
   display:flex;
   align-items:center;
-  justify-content:center;
+  justify-content:center;   /* ✅ CENTER */
   gap:1rem;
+  width:auto;               /* ✅ REMOVE FIXED WIDTH */
 }
 
 .contact-ico{
