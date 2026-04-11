@@ -26,7 +26,6 @@ body{
   background:var(--off-white);
   color:var(--ink);
   line-height:1.6;
-  padding-top: 56px;   /* ✅ ADD THIS LINE */
 }
 /* ── NAV ── */
 /* ── NAV ── */
@@ -66,7 +65,7 @@ nav{
 
 /* ── HERO ── */
 .hero{
-  min-height:100vh;
+  min-height:calc(100vh - 56px);  /* ✅ FIX */
   background:var(--purple-deeper);
   display:flex;
   flex-direction:column;
@@ -74,8 +73,8 @@ nav{
   padding:9rem 3rem 5rem;
   position:relative;
 
-  overflow: visible;   /* 🔥 IMPORTANT FIX */
-  z-index: 1;          /* 🔥 IMPORTANT FIX */
+  overflow:visible;
+  z-index:1;
 }
 
 /* Geometric background shapes */
