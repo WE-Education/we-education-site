@@ -670,9 +670,9 @@ body{
     gap: 2rem;
   }
 
-  .qr-container {
-    flex-direction: column;
-  }
+ .qr-container {
+  flex-direction: row !important;
+}
 
   .hero h1 {
     font-size: 2.2rem;
@@ -685,7 +685,23 @@ body{
   /* 🔥 FIX CONTACT LAYOUT (OVERRIDE) */
 
 .contact-inner{
-  display:block !important;
+  display:flex !important;
+  flex-direction:column;
+  align-items:center;
+}
+  .contact-left{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.contact-details{
+  align-items:center;
+}
+
+.contact-row{
+  justify-content:center;
 }
 
 .contact-left{
