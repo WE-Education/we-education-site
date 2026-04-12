@@ -629,6 +629,27 @@ body{
     padding: 100px 20px 40px;
   }
 
+  /* 🔥 HERO IMAGE FIX (IMPORTANT) */
+  .hero-visual {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .photo-cell.tall {
+    grid-row: span 1;   /* REMOVE tall stretching */
+    height: 240px;      /* main image height */
+  }
+
+  .photo-cell {
+    height: 150px;      /* other images */
+  }
+
+  .photo-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   /* ===== VIDEO ===== */
   .video-inner {
     grid-template-columns: 1fr;
@@ -650,14 +671,10 @@ body{
     grid-template-columns: 1fr;
   }
 
-  /* ===== GALLERY (FIX YOUR ISSUE) ===== */
+  /* ===== GALLERY ===== */
   .gallery-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-  }
-
-  .gallery-cell {
-    height: auto;
   }
 
   .gallery-cell.wide {
@@ -694,7 +711,33 @@ body{
     grid-template-columns: 1fr;
   }
 
-  /* ===== FOOTER FIX ===== */
+  /* ===== CONTACT ===== */
+  .contact-sec {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .contact-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-row {
+    justify-content: center;
+  }
+
+  /* 🔥 QR STACK ON MOBILE */
+  .qr-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .qr-box img {
+    width: 120px;
+  }
+
+  /* ===== FOOTER ===== */
   .footer-top {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -706,6 +749,15 @@ body{
     gap: 10px;
   }
 
+  /* ===== GLOBAL PADDING ===== */
+  .programs-inner,
+  .gallery-inner,
+  .phil-inner,
+  .serve-inner,
+  .testi-inner,
+  .video-inner {
+    padding: 0 1rem;
+  }
 }
 
   /* CONTACT */
