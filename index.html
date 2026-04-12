@@ -393,10 +393,8 @@ nav{
 .contact-sec{
   background:var(--purple-deeper);
   padding:6rem 3rem 8rem;
-
   position:relative;
   width:100%;
-}
   text-align: center;
 }
 
@@ -482,15 +480,6 @@ nav{
 .contact-val{
   font-size:14px;
   color:#ffffff;   /* 🔥 force full white */
-}
-
-.qr-container{
-  display:flex;
-  justify-content:center;
-  align-items:center;   /* ✅ FIX */
-  gap:3rem;
-  margin:2rem auto;
-  width:100%;
 }
 
 .qr-box{
@@ -737,10 +726,12 @@ body{
   }
 
   /* QR */
+ @media (max-width: 768px) {
   .qr-container {
     flex-direction: column;
     gap: 1.5rem;
   }
+}
 
   .qr-box img {
     width: 120px;
