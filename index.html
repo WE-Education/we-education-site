@@ -441,8 +441,14 @@ nav{
 .qr-container {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;   /* 🔥 KEY FIX */
+  align-items: center;
+  gap: 3rem;
+
+  flex-direction: row;     /* 🔥 FORCE SIDE BY SIDE */
+  flex-wrap: nowrap;      /* 🔥 PREVENT STACKING */
+
+  margin: 2rem auto;
+  width: 100%;
 }
 
 .qr-box {
