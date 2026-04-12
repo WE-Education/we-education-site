@@ -597,7 +597,7 @@ body{
 .foot-brand-p{font-size:13px;color:rgba(255,255,255,0.35);line-height:1.75;max-width:300px}
 .foot-col h5{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1rem}
 .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
-.foot-col a{color:rgba(255,255,255,0.45);text-decoration:none;font-size:13.5px;transition:color .2s}
+.foot-col a{color: rgba(255,255,255,0.45);text-decoration:none;font-size:13.5px;transition:color .2s}
 .foot-col a:hover{color:var(--orange)}
 .footer-bottom{
   max-width:1160px;margin:0 auto;
@@ -712,6 +712,25 @@ body{
   width: 100%;
   aspect-ratio: 16 / 9;
 }
+  .gallery-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.gallery-cell {
+  height: auto;
+}
+
+/* BIG IMAGE (top one) */
+.gallery-cell.wide {
+  grid-column: span 1;
+  height: 260px;
+}
+
+/* SMALL CARDS BELOW */
+.gallery-cell:not(.wide) {
+  height: 160px;
+}
 
   /* VIDEO */
   /* VIDEO SECTION */
@@ -762,10 +781,6 @@ body{
 .gallery-grid {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-}
-
-.gallery-cell {
-  aspect-ratio: 1 / 1;   /* 🔥 PERFECT SQUARE */
 }
 
   /* PHILOSOPHY */
