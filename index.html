@@ -619,147 +619,85 @@ body{
   /* ── MOBILE RESPONSIVE ── */
 @media (max-width: 768px) {
 
-  /* 🔥 STOP RIGHT OVERFLOW */
-  html, body {
-    width: 100%;
+  /* ===== GENERAL FIX ===== */
+  body {
     overflow-x: hidden;
   }
 
-  * {
-    max-width: 100%;
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  /* NAV */
-  nav {
-    padding: 0 1rem;
+  /* ===== TEXT FIX (cutting issue) ===== */
+  h1, h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    word-break: break-word;
   }
 
-  /* HERO */
-  .hero {
-    padding: 7rem 1.2rem 3rem;
+  p {
+    font-size: 15px;
+    line-height: 1.6;
   }
 
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-    justify-items: center;
-  }
-
-  .hero-left {
-    display: flex;
+  /* ===== VIDEO SECTION FIX ===== */
+  .video-inner {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
 
-  /* ✅ FIX TEXT CUTTING */
-.hero h1 {
-  font-size: 1.7rem;     /* slightly smaller */
-  line-height: 1.25;
-  word-break: break-word;
-  padding: 0 10px;       /* 🔥 KEY FIX */
-}
-
-  .hero-lead {
-    font-size: 0.95rem;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero-stats {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-visual {
+  .video-left {
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
   }
 
-  /* ✅ FIX IMAGE STRETCH (ALL IMAGES) */
-  .photo-cell img,
+  .video-inner iframe {
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+  }
+
+  /* ===== GALLERY FIX (MATCH YOUR DESIGN) ===== */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-cell {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  /* BIG IMAGE */
+  .gallery-cell.wide {
+    height: 240px;
+  }
+
+  /* SMALL IMAGES */
+  .gallery-cell:not(.wide) {
+    height: 150px;
+  }
+
+  /* IMAGE FIT FIX */
   .gallery-cell img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .photo-cell img,
-.gallery-cell img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-  .video-left {
-  padding: 0 10px;
-}
-  .video-wrap {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #000;
-}
 
-.video-wrap iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-  .video-wrap {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-  .gallery-grid {
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
+  /* ===== FOOTER FIX (text cut off on right) ===== */
+  .footer-inner {
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
 
-.gallery-cell {
-  height: auto;
-}
+  .footer-inner div {
+    width: 100%;
+  }
 
-/* BIG IMAGE (top one) */
-.gallery-cell.wide {
-  grid-column: span 1;
-  height: 260px;
-}
-
-/* SMALL CARDS BELOW */
-.gallery-cell:not(.wide) {
-  height: 160px;
-}
-
-  /* VIDEO */
-  /* VIDEO SECTION */
-.video-sec {
-  position: relative;
-}
-
-.video-inner {
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-.video-left {
-  max-width: 520px;
-}
-
-.video-wrap {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 32px 80px rgba(0,0,0,0.4);
-}
-
-.video-wrap iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
 }
 
   /* PROGRAMS */
@@ -777,11 +715,6 @@ body{
     padding-left: 1.2rem !important;
     padding-right: 1.2rem !important;
   }
-
-.gallery-grid {
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
 
   /* PHILOSOPHY */
   .phil-sec {
