@@ -619,83 +619,96 @@ body{
   /* ── MOBILE RESPONSIVE ── */
 @media (max-width: 768px) {
 
-  /* ===== GENERAL FIX ===== */
-  body {
+  /* ===== STOP SIDE SHIFT ===== */
+  html, body {
     overflow-x: hidden;
   }
 
-  section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  /* ===== TEXT FIX (cutting issue) ===== */
-  h1, h2 {
-    font-size: 28px;
-    line-height: 1.2;
-    word-break: break-word;
-  }
-
-  p {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  /* ===== VIDEO SECTION FIX ===== */
-  .video-inner {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .video-left {
-    width: 100%;
-  }
-
-  .video-inner iframe {
-    width: 100%;
-    height: 220px;
-    border-radius: 16px;
-  }
-
-  /* ===== GALLERY FIX (MATCH YOUR DESIGN) ===== */
-  .gallery-grid {
-    display: grid;
+  /* ===== HERO ===== */
+  .hero-inner {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 2rem;
+  }
+
+  .hero {
+    padding: 100px 20px 40px;
+  }
+
+  /* ===== VIDEO ===== */
+  .video-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .video-wrap {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .video-wrap iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ===== PROGRAMS ===== */
+  .prog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== GALLERY (FIX YOUR ISSUE) ===== */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 
   .gallery-cell {
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
+    height: auto;
   }
 
-  /* BIG IMAGE */
   .gallery-cell.wide {
     height: 240px;
   }
 
-  /* SMALL IMAGES */
   .gallery-cell:not(.wide) {
-    height: 150px;
+    height: 160px;
   }
 
-  /* IMAGE FIT FIX */
   .gallery-cell img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  /* ===== FOOTER FIX (text cut off on right) ===== */
-  .footer-inner {
-    flex-direction: column;
-    gap: 20px;
-    text-align: left;
+  /* ===== PHILOSOPHY ===== */
+  .phil-top {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .footer-inner div {
-    width: 100%;
+  .pillars-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== SERVE ===== */
+  .serve-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== FOOTER FIX ===== */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
 }
